@@ -1,0 +1,32 @@
+doublerAppend function observations:
+
+-In "doublerAppend" we are using the ".push method". This method adds one or more elements to the END of an array and returns the new length. The ".push" method does not cause the arrays existing elements to be shifted from their original index position, but rather simply add the new elements to the END of the array. The "doublerAppend" function starts off slower than the "doublerInsert", however after the input size that is being passed in grows; the time it takes to run the function scales in a linear time complexity(the function scales in proportion to the number of items being passed in). This will have a time complexity of 0(n).
+
+
+doublerInsert function observations:
+
+- In "doublerInsert" we are using the ".unshift" method. This method calls for inserting elements at the BEGINNING of an array. Because we are inserting elements at the beginning, each subsequent element in the array must be shifted over from their original index to accomodate the new elements being added. At first it seems that the "doublerInsert" function runs faster than the "doublerAppend", however after the input grows in size it becomes significantly slower. This is due to how many times the function needs to shift/reassign elements and loop through the array when new elements are added(which can grow exponentially depending on the size of the input). This is why the "tinyArray" ran so quickly, and the "extraLargeArray" ran so slow. This will result in an O(n2) time complexity. 
+
+
+=========>Variations in time-complexity<=============
+
+tinyArray:
+Append = (105 microseconds)
+Insert = (38.2 microseconds)
+
+smallArray:
+Append = (109.1 microseconds)
+Insert = (52.7 microseconds)
+
+mediumArray:
+Append = (153 microseconds)
+Insert = (166.3 microseconds)
+
+largeArray:
+Append = (505.1 microseconds)
+Insert = (8.7876 milliseconds)
+
+extraLargeArray:
+Append = (3.6655 milliseconds)
+Insert = (898.7122 milliseconds)
+=================================<>===========================================
